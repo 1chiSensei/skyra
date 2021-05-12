@@ -59,6 +59,11 @@ export class UserLazyPaginatedMessage extends LazyPaginatedMessage {
 		return this.addPage({ embed: typeof cb === 'function' ? cb(new MessageEmbed()) : cb });
 	}
 
+	public addAsyncPageEmbed(cb: MessageEmbed | ((builder: MessageEmbed) => Promise<MessageEmbed>)): this {
+		// return this.addPage({ embed: typeof cb === 'function' ? cb(new MessageEmbed()) : cb });
+		return this.addPage(async () => ({ embed: typeof cb === 'function' ? await cb(new MessageEmbed()) : cb }));
+	}
+
 	/**
 	 * Sets up the message's reactions and the collector.
 	 * @param channel The channel the handler is running at.
