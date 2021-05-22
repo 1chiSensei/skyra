@@ -635,12 +635,15 @@
 			"vehicles": ""
 		},
 		"people": {
+			"appearedInFilms": "Appeared in films",
 			"eyeColour": "Eye color",
 			"gender": "Gender",
 			"hairColour": "Hair color",
 			"height": "Height (cm)",
 			"homeWorld": "Homeworld",
 			"mass": "Mass (kg)",
+			"ownedStarShips": "Owned Star Ships",
+			"ownedVehicles": "Owned vehicles",
 			"skinColour": "Skin color",
 			"species": "Species",
 			"yearOfBirth": "Year of birth"

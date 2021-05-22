@@ -16,10 +16,27 @@ export namespace StarWars {
 	}
 
 	export interface FetchApiParameters {
+		/** The resource to fetch */
 		resource?: Resource;
+		/** The query parameter to search */
 		query?: string;
+		/** Optional exact URL to fetch, for fetching detailed data */
 		url?: string | URL;
+		/** Whether to throw on error, useful to set to false for fetching detailed data */
+		throwOnError?: boolean;
 	}
+
+	export type FetchApiReturnType<R extends Resource, DS extends DetailOrSearch = DetailOrSearch.Search, TE extends boolean = true> = Promise<
+		TE extends true ? FetchApiReturnTypeWithThrow<R, DS> : FetchApiReturnTypeWithoutThrow<R, DS>
+	>;
+
+	type FetchApiReturnTypeWithThrow<R extends Resource, DS extends DetailOrSearch = DetailOrSearch.Search> = DS extends DetailOrSearch.Search
+		? StarWarsApiResponse<R>
+		: SmartResourceType<R> | null;
+
+	type FetchApiReturnTypeWithoutThrow<R extends Resource, DS extends DetailOrSearch = DetailOrSearch.Search> = DS extends DetailOrSearch.Search
+		? StarWarsApiResponse<R> | undefined
+		: SmartResourceType<R> | null | undefined;
 
 	export interface StarWarsApiResponse<R extends Resource> {
 		/**
@@ -72,15 +89,18 @@ export namespace StarWars {
 			vehicles: string; //
 		};
 		[Resource.People]: {
-			mass: string;
-			skinColour: string;
-			height: string;
-			yearOfBirth: string;
+			appearedInFilms: string;
 			eyeColour: string;
 			gender: string;
 			hairColour: string;
+			height: string;
 			homeWorld: string;
+			mass: string;
+			ownedStarShips: string;
+			ownedVehicles: string;
+			skinColour: string;
 			species: string;
+			yearOfBirth: string;
 		};
 	}
 
