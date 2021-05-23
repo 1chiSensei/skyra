@@ -621,18 +621,16 @@
 	"starWarsNoResult": "{{REDCROSS}} I'm sorry, but I could not find anything for {{query}}",
 	"starWarsPeopleTitles": {
 		"films": {
-			"characters": "",
-			"creationDate": "",
-			"director": "",
-			"episodeId": "",
-			"planets": "",
-			"producer": "",
-			"releaseDate": "",
-			"species": "",
-			"starships": "",
-			"title": "",
-			"url": "",
-			"vehicles": ""
+			"characters": "Top 3 characters in this film",
+			"creationDate": "Creation date",
+			"director": "Directory",
+			"episodeId": "Episode ID",
+			"planets": "Top 3 planets in this film",
+			"producer": "Producer",
+			"releaseDate": "Release date",
+			"species": "Top 3 species in this film",
+			"starships": "Top 3 starships in this film",
+			"vehicles": "Top 3 vehicles in this film"
 		},
 		"people": {
 			"appearedInFilms": "Appeared in films",
@@ -642,11 +640,36 @@
 			"height": "Height (cm)",
 			"homeWorld": "Homeworld",
 			"mass": "Mass (kg)",
-			"ownedStarShips": "Owned Star Ships",
+			"ownedStarShips": "Owned starships",
 			"ownedVehicles": "Owned vehicles",
 			"skinColour": "Skin color",
 			"species": "Species",
 			"yearOfBirth": "Year of birth"
+		},
+		"starships": {
+			"amountOfPassengers": "Amount of passengers",
+			"cargoCapacity": "Cargo capacity",
+			"class": "Class of starship",
+			"consumables": "Time until needs to restock on consumables",
+			"costInCredits": "Cost",
+			"crew": "Number of personnel to pilot",
+			"films": "Appeared in films",
+			"length": "Length",
+			"manufacturer": "Manufacturer(s)",
+			"maximumAtmospheringSpeed": "Maximum atmospheric speed",
+			"megalightsTravelSpeed": "Maximum megalights per second",
+			"model": "Model name",
+			"pilots": "People who have piloted this ship"
+		},
+		"planets": {
+			"appearedInFilms": "Appeared in films",
+			"averageSentientPopulation": "Average of sentient inhabitants",
+			"climate": "Climate(s)",
+			"diameter": "Diameter in kilometers",
+			"orbitalPeriod": "Standard Days for planet to orbit around local star",
+			"rotationPeriod": "Standard hours for rotating around own axis",
+			"surfaceWaterPercentage": "Amount of surface covered by water",
+			"terrain": "Terrain(s)"
 		}
 	}
 }

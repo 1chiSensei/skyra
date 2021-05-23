@@ -75,18 +75,15 @@ export namespace StarWars {
 
 	export interface EmbedTitles {
 		[Resource.Films]: {
-			characters: string; //
-			creationDate: string;
+			characters: string;
 			director: string;
 			episodeId: string;
-			planets: string; //
+			planets: string;
 			producer: string;
 			releaseDate: string;
-			species: string; //
-			starships: string; //
-			title: string;
-			url: string;
-			vehicles: string; //
+			species: string;
+			starships: string;
+			vehicles: string;
 		};
 		[Resource.People]: {
 			appearedInFilms: string;
@@ -101,6 +98,33 @@ export namespace StarWars {
 			skinColour: string;
 			species: string;
 			yearOfBirth: string;
+		};
+		[Resource.Starships]: {
+			amountOfPassengers: string;
+			cargoCapacity: string;
+			class: string;
+			consumables: string;
+			costInCredits: string;
+			crew: string;
+			films: string;
+			hyperdriveRating: string;
+			length: string;
+			manufacturer: string;
+			maximumAtmospheringSpeed: string;
+			megalightsTravelSpeed: string;
+			model: string;
+			pilots: string;
+		};
+		[Resource.Planets]: {
+			diameter: string;
+			climate: string;
+			surfaceWaterPercentage: string;
+			rotationPeriod: string;
+			terrain: string;
+			gravity: string;
+			orbitalPeriod: string;
+			appearedInFilms: string;
+			averageSentientPopulation: string;
 		};
 	}
 
@@ -463,7 +487,7 @@ export namespace StarWars {
 		 */
 		climate: string;
 		/**
-		 * The percentage of the planet surface that is naturally occuring water or bodies of water.
+		 * The percentage of the planet surface that is naturally occurring water or bodies of water.
 		 */
 		surface_water: string;
 		/**
@@ -507,7 +531,7 @@ export namespace StarWars {
 		 */
 		residents: string[];
 		/**
-		 * The average populationof sentient beings inhabiting this planet.
+		 * The average population of sentient beings inhabiting this planet.
 		 */
 		population: string;
 	}
