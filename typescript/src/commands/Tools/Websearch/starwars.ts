@@ -1,5 +1,6 @@
 import { LanguageKeys } from '#lib/i18n/languageKeys';
 import { PaginatedMessageCommand, UserLazyPaginatedMessage } from '#lib/structures';
+// @ts-ignore This is incorrect but will be replaced eventually anyway
 import { GuildMessage, StarWars } from '#lib/types';
 import { CdnUrls } from '#lib/types/Constants';
 import { Emojis } from '#utils/constants';
